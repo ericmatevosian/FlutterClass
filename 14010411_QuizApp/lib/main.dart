@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'QuestionBank.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,34 +46,7 @@ class quizApp extends StatefulWidget {
 
 class _quizAppState extends State<quizApp> {
 
-  List<String> QuestionBox=[
-    "The atomic number for lithium is 17",
-    "A cross between a horse and a zebra is called a 'Hobra'",
-    "The black box in a plane is black",
-    "Alliumphobia is a fear of garlic",
-    "Marrakesh is the capital of Morocco",
-    "Fish cannot blink",
-    "An octopus has three hearts",
-    "Thomas Edison discovered gravity",
-    "Alaska is the biggest American state in square miles",
-    "There are 14 bones in a human foot",
-    "END",
-    "---",
-  ];
-  int QuestionCounter = 0;
-  List<bool> AnswerBox=[false,false,false,true,false,true,true,false,true,false];
-  List<Widget> ScoreKeeper =[];
-  Icon TrueMarker = Icon(
-      Icons.check_sharp,
-      color: Colors.green,
-      size: 30,
-    );
-  Icon FalseMarker = Icon(
-    Icons.close_sharp,
-    color: Colors.red,
-    size: 30,
-  );
-
+  Question question = Question(); //define an object from Question Class
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +60,7 @@ class _quizAppState extends State<quizApp> {
            padding: const EdgeInsets.all(5.0),
             child: Center(
               child: Text(
-                QuestionBox[QuestionCounter],
+                question.QuestionBox[question.QuestionCounter],
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 35,
@@ -101,31 +75,31 @@ class _quizAppState extends State<quizApp> {
           flex: 2,
           child: FlatButton(
             onPressed: (){
-              print("Question Number = ${QuestionCounter}");
+              print("Question Number = ${question.QuestionCounter}");
               setState((){
-                //ScoreKeeper.add(FalseMarker);
-                if(AnswerBox[QuestionCounter] == false){
-                  ScoreKeeper.add(TrueMarker);
+
+                if(question.AnswerBox[question.QuestionCounter] == false){
+                  question.ScoreKeeper.add(question.TrueMarker);
                   //print("Bravo");
                 }
                 else {
-                  ScoreKeeper.add(FalseMarker);
+                  question.ScoreKeeper.add(question.FalseMarker);
                   print("Oops!!");
                 }
 
-                QuestionCounter++;
-                if(QuestionCounter==10) {
-                  QuestionCounter=0;
-                  ScoreKeeper.clear();
+                question.QuestionCounter++;
+                if(question.QuestionCounter==10) {
+                  question.QuestionCounter=0;
+                  question.ScoreKeeper.clear();
                 }
-                QuestionBox[QuestionCounter];
+                question.QuestionBox[question.QuestionCounter];
               });
             },
             onLongPress: (){
               print("Clear");
               setState((){
-                ScoreKeeper.clear();
-                QuestionCounter=0;
+                question.ScoreKeeper.clear();
+                question.QuestionCounter=0;
               });
             },
             child: Container(
@@ -149,24 +123,24 @@ class _quizAppState extends State<quizApp> {
           flex: 2,
           child: FlatButton(
             onPressed: (){
-              print("Question Number = ${QuestionCounter}");
+              print("Question Number = ${question.QuestionCounter}");
               setState((){
-                //ScoreKeeper.add(FalseMarker);
-                if(AnswerBox[QuestionCounter] == true){
-                  ScoreKeeper.add(TrueMarker);
+
+                if(question.AnswerBox[question.QuestionCounter] == true){
+                  question.ScoreKeeper.add(question.TrueMarker);
                   print("Bravo");
                 }
                 else {
-                  ScoreKeeper.add(FalseMarker);
+                  question.ScoreKeeper.add(question.FalseMarker);
                   print("Oops!!");
                 }
 
-                QuestionCounter++;
-                if(QuestionCounter==10) {
-                  QuestionCounter=0;
-                  ScoreKeeper.clear();
+                question.QuestionCounter++;
+                if(question.QuestionCounter==10) {
+                  question.QuestionCounter=0;
+                  question.ScoreKeeper.clear();
                 }
-                QuestionBox[QuestionCounter];
+                question.QuestionBox[question.QuestionCounter];
               });
 
 
@@ -192,7 +166,7 @@ class _quizAppState extends State<quizApp> {
           flex: 1,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: ScoreKeeper,
+            children: question.ScoreKeeper,
           ),
         )
       ],
