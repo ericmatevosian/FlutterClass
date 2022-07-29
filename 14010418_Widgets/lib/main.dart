@@ -768,87 +768,87 @@ void main() {
 // }
 
 /// Alert Dialog
-//
-// class MyApp extends StatelessWidget {
-//   const MyApp({Key? key}) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Home(),
-//     );
-//   }
-// }
-//
-// class Home extends StatelessWidget {
-//   const Home({Key? key}) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Center(
-//         child: MaterialButton(
-//           color: Colors.grey.shade400,
-//           onPressed: () {
-//             print("Button Pressed");  // user must tap button!
-//             showDialog(
-//                 //barrierColor: Colors.black,
-//                 barrierDismissible: false,
-//                 context: context,
-//                 builder: (BuildContext context) {
-//                   return AlertDialog(
-//                     backgroundColor: Colors.grey.shade200,
-//                     title: Text(
-//                       "Warning!",
-//                       textAlign: TextAlign.center,
-//                       style: TextStyle(
-//                         fontSize: 30,
-//                       ),
-//                     ),
-//                     content: Text(
-//                       "Done",
-//                       style: TextStyle(
-//                         fontSize: 20,
-//                       ),
-//                     ),
-//                     actions: [
-//                       TextButton(
-//                           onPressed:(){
-//                             Navigator.pop(context);
-//                             print("User pressed Ok");
-//                             },
-//                           child: Text("OK")),
-//                       TextButton(
-//                           onPressed:(){
-//                             Navigator.pop(context);
-//                             print("User pressed Cancel");
-//                           },
-//                           child: Text("Cancel")),
-//                       TextButton(
-//                           onPressed:(){
-//                             Navigator.pop(context);
-//                             print("User pressed 'I don't know' ");
-//                           },
-//                           child: Text("I donw know!")),
-//
-//
-//                     ],
-//                   );
-//                 });
-//           },
-//           child: Text(
-//             "Show Alert Dialog",
-//             style: TextStyle(
-//               color: Colors.indigo.shade900,
-//               fontSize: 45,
-//               fontWeight: FontWeight.bold,
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Home(),
+    );
+  }
+}
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: MaterialButton(
+          color: Colors.grey.shade400,
+          onPressed: () {
+            print("Button Pressed");  // user must tap button!
+            showDialog(
+                //barrierColor: Colors.black,
+                barrierDismissible: false,
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    backgroundColor: Colors.grey.shade200,
+                    title: Text(
+                      "Warning!",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 30,
+                      ),
+                    ),
+                    content: Text(
+                      "Done",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    actions: [
+                      TextButton(
+                          onPressed:(){
+                            Navigator.pop(context);
+                            print("User pressed Ok");
+                            },
+                          child: Text("OK")),
+                      TextButton(
+                          onPressed:(){
+                            Navigator.pop(context);
+                            print("User pressed Cancel");
+                          },
+                          child: Text("Cancel")),
+                      TextButton(
+                          onPressed:(){
+                            Navigator.pop(context);
+                            print("User pressed 'I don't know' ");
+                          },
+                          child: Text("I donw know!")),
+
+
+                    ],
+                  );
+                });
+          },
+          child: Text(
+            "Show Alert Dialog",
+            style: TextStyle(
+              color: Colors.indigo.shade900,
+              fontSize: 45,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 ///AppBar
 // class MyApp extends StatelessWidget {
@@ -921,7 +921,7 @@ void main() {
 //           backgroundColor: Colors.black,
 //           title: Center(
 //             child: Text(
-//               "SLider Widget",
+//               "Drawer Widget",
 //               style: TextStyle(fontSize: 25, color: Colors.white),
 //             ),
 //           ),
