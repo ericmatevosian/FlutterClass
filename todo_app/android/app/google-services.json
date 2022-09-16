@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "545853294627",
+    "project_id": "todo-list-683ca",
+    "storage_bucket": "todo-list-683ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545853294627:android:f76bc82c634fbe2ad9c996",
+        "android_client_info": {
+          "package_name": "www.rizelectron.ir.todo_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545853294627-7n73n49j82hd34i0s3rdrrm09sgpf6fb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIRTg9KxE2FOyaKbIe4qsUa7Wv-TtqYBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545853294627-7n73n49j82hd34i0s3rdrrm09sgpf6fb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
